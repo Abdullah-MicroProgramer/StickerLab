@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sticker Lab</string>
+    <string name="search_anything_you_want">Search anything you want ....</string>
+    <string name="discovering_top_notch_stickers_for_you">Discovering top-notch stickers for you.</string>
+    <string name="most_popular">Most Popular</string>
+    <string name="see_all">See all</string>
+    <string name="featured_packs">Featured Packs</string>
+</resources>

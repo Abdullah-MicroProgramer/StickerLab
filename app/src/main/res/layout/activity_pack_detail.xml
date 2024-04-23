@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Detail.PackDetailActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="120dp"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="?android:actionBarItemBackground"
+            android:clickable="true"
+            android:elevation="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/iv_gray"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:elevation="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito"
+        android:gravity="start"
+        android:singleLine="true"
+        android:text="Caring Couple"
+        android:textColor="@color/white"
+        android:textFontWeight="600"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:padding="4dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_download"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="2dp"
+        android:elevation="4dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/nunito"
+        android:gravity="start"
+        android:singleLine="true"
+        android:text="10k+ Downloads"
+        android:textColor="@color/white"
+        android:textFontWeight="400"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="@+id/imageView4" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/gradient_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="50dp"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/logotext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/urbanist"
+            android:gravity="start"
+            android:paddingStart="50dp"
+            android:singleLine="true"
+            android:text="Sticker Detail"
+            android:textColor="@color/white"
+            android:textFontWeight="700"
+            android:textSize="26dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_pack_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:spanCount="4"
+        tools:listitem="@layout/pack_detail_act_adapter_item" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/bg_round_6"
+        android:text="ADD TO WHATSAPP"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:drawableLeft="@drawable/ic_wtasapp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:ellipsize="end"
+        android:fontFamily="@font/urbanist"
+        android:gravity="center"
+        android:singleLine="true"
+        android:layout_marginBottom="10dp"
+        android:text="Tap to preview sticker"
+        android:textColor="@color/black"
+        android:textFontWeight="700"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+         />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
